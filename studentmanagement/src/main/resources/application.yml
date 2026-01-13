@@ -6,14 +6,16 @@ spring:
     name: student-management
   data:
     mongodb:
-      uri: mongodb+srv://prvijay0_db_user:1234vijay@cluster0.kkwy3vh.mongodb.net/?appName=Cluster0
-      database: student_management
+      # Use environment variable `MONGODB_URI` for credentials and host.
+      # Example local fallback: mongodb://localhost:27017/student_management
+      uri: ${MONGODB_URI:mongodb://localhost:27017/student_management}
+      database: ${MONGODB_DATABASE:student_management}
 
   mail:
-     host: smtp.gmail.com
-     port: 587
-     username: prvijay0@gmail.com
-     password: rxaj komq eqak nogk  # paste the 16-char app password (no spaces)
+     host: ${MAIL_HOST:smtp.gmail.com}
+     port: ${MAIL_PORT:587}
+     username: ${MAIL_USERNAME:}
+     password: ${MAIL_PASSWORD:}
      properties:
       mail:
         smtp:
