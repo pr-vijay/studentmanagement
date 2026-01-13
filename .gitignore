@@ -1,0 +1,33 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Frontend build outputs
+dist/
+build/
+
+# Maven
+/studentmanagement/target/
+/target/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+
+# Logs and env
+.env
+*.log
+
+# Java
+*.class
+*.jar
+*.war
+
+# temporary files
+/.classpath
+/.project
+/.settings/
